@@ -1,0 +1,9 @@
+.ServicesList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    padding-top: var(--navbar-height);
+    padding-bottom: var(--order-height);
+    font: var(--font-s);
+}

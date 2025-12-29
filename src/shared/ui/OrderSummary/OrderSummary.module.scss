@@ -1,0 +1,90 @@
+.OrderSummary {
+    width: 100%;
+    max-height: calc(100vh - var(--navbar-height));
+    font: var(--font-s);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    transition: grid-template-rows 0.3s ease;
+    overflow: hidden;
+    background-color: whitesmoke;
+
+    .head_block {
+        width: 100%;
+        padding: 10px;
+        height: var(--order-height);
+        background-color: rgb(189 231 189);
+        border-bottom: 1px dashed black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+
+        .total_price {
+            .text_price {
+                font-weight: 500;
+            }
+        }
+
+        .btn_order {
+            background-color: #98b924;
+        }
+    }
+
+    .summary_order {
+        padding: 10px;
+        overflow-y: auto;
+        min-height: 0;
+
+        .card {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 1px dashed black;
+            padding-bottom: 5px;
+
+            .head_card {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .card_footer {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+
+                .btn_delete {
+                    background-color: red;
+                }
+            }
+        }
+    }
+
+    &.collapsed {
+        grid-template-rows: auto 0fr;
+
+        .summary_order {
+            padding: 0;
+        }
+    }
+}
+
+.empty_cart {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+
+    p {
+        margin: 5px 0;
+
+        &:first-child {
+            font-weight: 500;
+        }
+    }
+}

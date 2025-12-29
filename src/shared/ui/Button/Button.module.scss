@@ -1,0 +1,111 @@
+.Button {
+    cursor: pointer;
+    color: var(--primary-color);
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    transition: all 0.15s ease;
+    font-family: inherit;
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+}
+
+.order_up {
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: white;
+    font: var(--font-s);
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: #98b924;
+    box-shadow: 0 2px 8px rgb(152 185 36 / 30%);
+
+    &:hover:not(:disabled) {
+        background-color: #8aa820;
+        box-shadow: 0 3px 12px rgb(152 185 36 / 40%);
+    }
+
+    &:active:not(:disabled) {
+        box-shadow: 0 1px 4px rgb(152 185 36 / 20%);
+    }
+}
+
+.delete {
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: white;
+    font: var(--font-s);
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: rgb(204 66 66);
+    box-shadow: 0 1px 4px rgb(204 66 66 / 30%);
+
+    &:hover:not(:disabled) {
+        background-color: rgb(220 80 80);
+        box-shadow: 0 2px 6px rgb(204 66 66 / 40%);
+    }
+
+    &:active:not(:disabled) {
+        background-color: rgb(190 60 60);
+        box-shadow: 0 1px 2px rgb(204 66 66 / 20%);
+    }
+}
+
+.add_item {
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: #f19a2f;
+    color: white;
+    font: var(--font-m);
+    font-weight: 500;
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 4px rgb(241 154 47 / 30%);
+
+    &:hover:not(:disabled) {
+        background-color: #f2a94e;
+        box-shadow: 0 2px 6px rgb(241 154 47 / 40%);
+    }
+
+    &:active:not(:disabled) {
+        background-color: #e08a1f;
+        box-shadow: 0 1px 2px rgb(241 154 47 / 20%);
+    }
+}
+
+.remove_item {
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: white;
+    font: var(--font-m);
+    font-weight: 500;
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 4px rgb(231 76 60 / 30%);
+
+    &:hover:not(:disabled) {
+        background-color: #ec7063;
+        box-shadow: 0 2px 6px rgb(231 76 60 / 40%);
+    }
+
+    &:active:not(:disabled) {
+        background-color: #c0392b;
+        box-shadow: 0 1px 2px rgb(231 76 60 / 20%);
+    }
+}
