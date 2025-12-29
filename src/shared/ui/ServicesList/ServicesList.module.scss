@@ -3,7 +3,19 @@
     grid-template-columns: 1fr;
     gap: 10px;
     width: 100%;
-    padding-top: var(--navbar-height);
-    padding-bottom: var(--order-height);
+    padding: var(--navbar-height) 5px var(--order-height) 5px;
     font: var(--font-s);
+
+    // Планшет: 2 карточки в ряд
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    // Десктоп: 3 карточки в ряд
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: calc(var(--navbar-height) + 20px) 40px calc(var(--order-height) + 20px) 40px;
+    }
 }

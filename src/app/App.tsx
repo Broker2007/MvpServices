@@ -9,12 +9,9 @@ function App() {
 
         <div className={classNames('app', {}, [])}>
             <Suspense fallback="">
-                {/* <Header /> */}
-                <div className="content-page">
-                    <Routes>
-                        <Route path="/" element={<MainPage />} />
-                    </Routes>
-                </div>
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                </Routes>
             </Suspense>
         </div>
     );

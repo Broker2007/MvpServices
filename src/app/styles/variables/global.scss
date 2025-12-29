@@ -6,24 +6,39 @@
 }
 
 :root {
+    font-size: 14px;
+
     --font-family-main: "Gilroy", "Times New Roman", serif;
-    --font-size-s: 14px;
-    --font-line-s: 22px;
+    --font-size-s: 1rem;        /* 14px */
+    --font-line-s: 1.571rem;    /* 22px */
+    --font-size-m: 1.143rem;    /* 16px */
+    --font-line-m: 1.714rem;    /* 24px */
+    --font-size-l: 1.714rem;    /* 24px */
+    --font-line-l: 2.286rem;    /* 32px */
+    --font-size-xl: 2.286rem;   /* 32px */
+    --font-line-xl: 2.857rem;   /* 40px */
     --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
-    --font-size-m: 16px;
-    --font-line-m: 24px;
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
-    --font-size-l: 24px;
-    --font-line-l: 32px;
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
-    --font-size-xl: 32px;
-    --font-line-xl: 40px;
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
     // Размеры
     --navbar-height: 45px;
     --order-height: 65px;
+    --order-summary-width: 100%;
 
     // цвета
     --bg-color: #f4f1f8;
+
+    // медиа
+
+    @media (min-width: 768px) {
+        font-size: 15px;
+    }
+
+    @media (min-width: 1024px) {
+        --order-summary-width: 550px;
+
+        font-size: 16px;
+    }
 }

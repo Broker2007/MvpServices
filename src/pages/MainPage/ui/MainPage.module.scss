@@ -1,10 +1,3 @@
-.position_order {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
 .head_block {
     background-color: white;
     position: fixed;
@@ -16,4 +9,17 @@
     font-weight: bold;
     text-align: center;
     height: var(--navbar-height);
+}
+
+.position_order {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (min-width: 1024px) {
+    .position_order {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
 }

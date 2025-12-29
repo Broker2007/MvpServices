@@ -1,7 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './MainPage.module.scss';
-import { Button } from '@/shared/ui/Button/Button';
-import { ThemeButton } from '@/shared/ui/Button/ThemeButton';
 import ServicesList from '@/shared/ui/ServicesList/ServicesList';
 import OrderSummary from '@/shared/ui/OrderSummary/OrderSummary';
 

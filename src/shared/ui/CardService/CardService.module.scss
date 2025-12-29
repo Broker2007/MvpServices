@@ -2,7 +2,15 @@
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
-    background-color: rgb(165, 163, 163);
+    background-color: white;
+    max-height: 290px;
+
+    .flex_space_bet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
 
     .card_icon {
         width: 100%;
@@ -11,7 +19,6 @@
     }
 
     .card_content {
-        border-bottom: 0.5px solid black;
         padding: 15px 30px 15px 15px;
 
         .card_title {
@@ -25,10 +32,13 @@
     }
 
     .card_footer {
+        border-top: 0.5px solid black;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px;
+        margin-top: auto;
         font: var(--font-m);
+        max-height: 73px;
     }
 }

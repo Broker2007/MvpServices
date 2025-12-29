@@ -24,23 +24,30 @@ const CardService = ({ className, service }: CardServiceProps) => {
 
     return (
         <div className={classNames(cls.CardService, {}, [className])}>
-            <img src={airplaneImg} alt="самолет" className={cls.card_icon} />
-            <div className={cls.card_content}>
-                <p className={cls.card_title}>{service.title}</p>
-                <p className={cls.card_description}>{service.description}</p>
+
+            <div className={cls.flex_space_bet}>
+                <div className={cls.h}>
+                    <img src={service.imageUrl} alt="изображение услуги" className={cls.card_icon} />
+                    <div className={cls.card_content}>
+                        <p className={cls.card_title}>{service.title}</p>
+                        <p className={cls.card_description}>{service.description}</p>
+                    </div>
+                </div>
+
+                <div className={cls.card_footer}>
+                    <p className={cls.card_price}>
+                        {service.price}
+                        {service.currency}
+                    </p>
+                    <Button
+                        theme={isSelected ? ThemeButton.REMOVE_ITEM : ThemeButton.ADD_ITEM}
+                        onClick={handleButtonClick}
+                    >
+                        {isSelected ? 'Убрать' : 'Добавить'}
+                    </Button>
+                </div>
             </div>
-            <div className={cls.card_footer}>
-                <p className={cls.card_price}>
-                    {service.price}
-                    {service.currency}
-                </p>
-                <Button
-                    theme={isSelected ? ThemeButton.REMOVE_ITEM : ThemeButton.ADD_ITEM}
-                    onClick={handleButtonClick}
-                >
-                    {isSelected ? 'Убрать' : 'Добавить'}
-                </Button>
-            </div>
+
         </div>
     );
 };

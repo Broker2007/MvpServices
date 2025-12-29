@@ -1,12 +1,12 @@
 .OrderSummary {
-    width: 100%;
+    width: var(--order-summary-width);
     max-height: calc(100vh - var(--navbar-height));
     font: var(--font-s);
-    display: grid;
-    grid-template-rows: auto 1fr;
-    transition: grid-template-rows 0.3s ease;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: whitesmoke;
+    border-radius: 5px;
+    overflow: hidden;
 
     .head_block {
         width: 100%;
@@ -19,32 +19,33 @@
         align-items: center;
         cursor: pointer;
         user-select: none;
-
-        .total_price {
-            .text_price {
-                font-weight: 500;
-            }
-        }
-
-        .btn_order {
-            background-color: #98b924;
-        }
+        flex-shrink: 0;
     }
 
     .summary_order {
-        padding: 10px;
         overflow-y: auto;
-        min-height: 0;
+        flex: 1;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        padding: 0 10px;
+        transition:
+            max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s ease 0.1s,
+            transform 0.3s ease 0.1s;
 
         .card {
             margin-top: 10px;
             display: flex;
             flex-direction: column;
-            align-items: start;
-            justify-content: center;
             gap: 10px;
             border-bottom: 1px dashed black;
             padding-bottom: 5px;
+            transform: scale(0.98);
+            opacity: 0;
+            transition:
+                transform 0.3s ease 0.15s,
+                opacity 0.25s ease 0.15s;
 
             .head_card {
                 display: flex;
@@ -57,19 +58,37 @@
                 justify-content: space-between;
                 width: 100%;
                 align-items: center;
+            }
+        }
+    }
 
-                .btn_delete {
-                    background-color: red;
-                }
+    &:not(.collapsed) {
+        .summary_order {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+            padding: 10px;
+
+            .card {
+                transform: scale(1);
+                opacity: 1;
             }
         }
     }
 
     &.collapsed {
-        grid-template-rows: auto 0fr;
-
         .summary_order {
-            padding: 0;
+            transition:
+                max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease,
+                transform 0.25s ease,
+                padding 0.3s ease 0.05s;
+
+            .card {
+                transition:
+                    transform 0.2s ease,
+                    opacity 0.2s ease;
+            }
         }
     }
 }
@@ -80,11 +99,8 @@
     color: #666;
     font-style: italic;
 
-    p {
-        margin: 5px 0;
-
-        &:first-child {
-            font-weight: 500;
-        }
+    p:first-child {
+        font-weight: 500;
+        margin-bottom: 5px;
     }
 }
