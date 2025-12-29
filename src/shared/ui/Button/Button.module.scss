@@ -1,11 +1,11 @@
 .Button {
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--color-primary);
     padding: 0;
     border: none;
     background: transparent;
     outline: none;
-    transition: all 0.15s ease;
+    transition: all var(--transition-fast);
     font-family: inherit;
 
     &:hover {
@@ -24,88 +24,88 @@
 }
 
 .order_up {
-    border-radius: 6px;
-    padding: 10px 20px;
-    color: white;
+    border-radius: var(--border-radius-l);
+    padding: var(--spacing-s) var(--spacing-l);
+    color: var(--color-white);
     font: var(--font-s);
     font-weight: 500;
     outline: none;
     border: none;
-    background-color: #98b924;
-    box-shadow: 0 2px 8px rgb(152 185 36 / 30%);
+    background-color: var(--color-primary);
+    box-shadow: var(--shadow-xl) var(--color-primary-shadow);
 
     &:hover:not(:disabled) {
-        background-color: #8aa820;
-        box-shadow: 0 3px 12px rgb(152 185 36 / 40%);
+        background-color: var(--color-primary-hover);
+        box-shadow: var(--shadow-xxl) var(--color-primary-shadow-hover);
     }
 
     &:active:not(:disabled) {
-        box-shadow: 0 1px 4px rgb(152 185 36 / 20%);
+        box-shadow: var(--shadow-m) var(--color-primary-shadow-active);
     }
 }
 
 .delete {
-    border-radius: 4px;
-    padding: 6px 12px;
-    color: white;
+    border-radius: var(--border-radius-s);
+    padding: 6px var(--spacing-s);
+    color: var(--color-white);
     font: var(--font-s);
     font-weight: 500;
     outline: none;
     border: none;
-    background-color: rgb(204 66 66);
-    box-shadow: 0 1px 4px rgb(204 66 66 / 30%);
+    background-color: var(--color-danger);
+    box-shadow: var(--shadow-m) var(--color-danger-shadow);
 
     &:hover:not(:disabled) {
-        background-color: rgb(220 80 80);
-        box-shadow: 0 2px 6px rgb(204 66 66 / 40%);
+        background-color: var(--color-danger-hover);
+        box-shadow: var(--shadow-l) var(--color-danger-shadow-hover);
     }
 
     &:active:not(:disabled) {
-        background-color: rgb(190 60 60);
-        box-shadow: 0 1px 2px rgb(204 66 66 / 20%);
+        background-color: var(--color-danger-active);
+        box-shadow: var(--shadow-s) var(--color-danger-shadow-active);
     }
 }
 
 .add_item {
-    border-radius: 4px;
-    padding: 8px 16px;
-    background-color: #f19a2f;
-    color: white;
+    border-radius: var(--border-radius-s);
+    padding: 8px var(--spacing-m);
+    background-color: var(--color-warning);
+    color: var(--color-white);
     font: var(--font-m);
     font-weight: 500;
     outline: none;
     border: none;
-    box-shadow: 0 1px 4px rgb(241 154 47 / 30%);
+    box-shadow: var(--shadow-m) var(--color-warning-shadow);
 
     &:hover:not(:disabled) {
-        background-color: #f2a94e;
-        box-shadow: 0 2px 6px rgb(241 154 47 / 40%);
+        background-color: var(--color-warning-hover);
+        box-shadow: var(--shadow-l) var(--color-warning-shadow-hover);
     }
 
     &:active:not(:disabled) {
-        background-color: #e08a1f;
-        box-shadow: 0 1px 2px rgb(241 154 47 / 20%);
+        background-color: var(--color-warning-active);
+        box-shadow: var(--shadow-s) var(--color-warning-shadow-active);
     }
 }
 
 .remove_item {
-    border-radius: 4px;
-    padding: 8px 16px;
-    background-color: #e74c3c;
-    color: white;
+    border-radius: var(--border-radius-s);
+    padding: 8px var(--spacing-m);
+    background-color: var(--color-remove);
+    color: var(--color-white);
     font: var(--font-m);
     font-weight: 500;
     outline: none;
     border: none;
-    box-shadow: 0 1px 4px rgb(231 76 60 / 30%);
+    box-shadow: var(--shadow-m) var(--color-remove-shadow);
 
     &:hover:not(:disabled) {
-        background-color: #ec7063;
-        box-shadow: 0 2px 6px rgb(231 76 60 / 40%);
+        background-color: var(--color-remove-hover);
+        box-shadow: var(--shadow-l) var(--color-remove-shadow-hover);
     }
 
     &:active:not(:disabled) {
-        background-color: #c0392b;
-        box-shadow: 0 1px 2px rgb(231 76 60 / 20%);
+        background-color: var(--color-remove-active);
+        box-shadow: var(--shadow-s) var(--color-remove-shadow-active);
     }
 }

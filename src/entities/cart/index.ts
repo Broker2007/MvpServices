@@ -1,6 +1,5 @@
 export type {
     Service,
-    CartItem,
     CartState,
     CartContextType,
 } from './model/types';

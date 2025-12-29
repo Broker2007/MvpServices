@@ -1,21 +1,23 @@
 .ServicesList {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: var(--spacing-s);
     width: 100%;
-    padding: var(--navbar-height) 5px var(--order-height) 5px;
+    padding: var(--navbar-height) var(--spacing-xs) var(--order-height) var(--spacing-xs);
     font: var(--font-s);
 
-    // Планшет: 2 карточки в ряд
     @media (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: var(--spacing-m);
     }
 
-    // Десктоп: 3 карточки в ряд
     @media (min-width: 1024px) {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: calc(var(--navbar-height) + 20px) 40px calc(var(--order-height) + 20px) 40px;
+        gap: var(--spacing-l);
+        padding:
+            calc(var(--navbar-height) + var(--spacing-l))
+            var(--spacing-xxl)
+            calc(var(--order-height) + var(--spacing-l))
+            var(--spacing-xxl);
     }
 }

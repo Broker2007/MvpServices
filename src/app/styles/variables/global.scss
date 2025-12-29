@@ -8,6 +8,7 @@
 :root {
     font-size: 14px;
 
+    // Типографика
     --font-family-main: "Gilroy", "Times New Roman", serif;
     --font-size-s: 1rem;        /* 14px */
     --font-line-s: 1.571rem;    /* 22px */
@@ -22,15 +23,80 @@
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
     --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
 
-    // Размеры
+    // Размеры компонентов
     --navbar-height: 45px;
     --order-height: 65px;
     --order-summary-width: 100%;
 
-    // цвета
+    // Цвета
     --bg-color: #f4f1f8;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray-light: #f5f5f5;
+    --color-gray: #666;
+    --color-gray-dark: #333;
 
-    // медиа
+    // Цвета кнопок и акцентов
+    --color-primary: #98b924;
+    --color-primary-hover: #8aa820;
+    --color-primary-shadow: rgb(152 185 36 / 30%);
+    --color-primary-shadow-hover: rgb(152 185 36 / 40%);
+    --color-primary-shadow-active: rgb(152 185 36 / 20%);
+    --color-danger: rgb(204 66 66);
+    --color-danger-hover: rgb(220 80 80);
+    --color-danger-active: rgb(190 60 60);
+    --color-danger-shadow: rgb(204 66 66 / 30%);
+    --color-danger-shadow-hover: rgb(204 66 66 / 40%);
+    --color-danger-shadow-active: rgb(204 66 66 / 20%);
+    --color-warning: #f19a2f;
+    --color-warning-hover: #f2a94e;
+    --color-warning-active: #e08a1f;
+    --color-warning-shadow: rgb(241 154 47 / 30%);
+    --color-warning-shadow-hover: rgb(241 154 47 / 40%);
+    --color-warning-shadow-active: rgb(241 154 47 / 20%);
+    --color-remove: #e74c3c;
+    --color-remove-hover: #ec7063;
+    --color-remove-active: #c0392b;
+    --color-remove-shadow: rgb(231 76 60 / 30%);
+    --color-remove-shadow-hover: rgb(231 76 60 / 40%);
+    --color-remove-shadow-active: rgb(231 76 60 / 20%);
+    --color-success: rgb(189 231 189);
+
+    // Spacing система
+    --spacing-xs: 5px;
+    --spacing-s: 10px;
+    --spacing-m: 15px;
+    --spacing-l: 20px;
+    --spacing-xl: 30px;
+    --spacing-xxl: 40px;
+
+    // Transitions
+    --transition-fast: 0.15s ease;
+    --transition-default: 0.3s ease;
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-transform: transform var(--transition-default);
+    --transition-opacity: opacity var(--transition-default);
+
+    // Брейкпоинты (для использования в медиа-запросах)
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    // Border
+    --border-radius-s: 4px;
+    --border-radius-m: 5px;
+    --border-radius-l: 6px;
+    --border-radius-xl: 10px;
+    --border-width-thin: 0.5px;
+    --border-width-default: 1px;
+    --border-color-default: var(--color-black);
+    --border-style-dashed: dashed;
+
+    // Shadow
+    --shadow-s: 0 1px 2px;
+    --shadow-m: 0 1px 4px;
+    --shadow-l: 0 2px 6px;
+    --shadow-xl: 0 2px 8px;
+    --shadow-xxl: 0 3px 12px;
 
     @media (min-width: 768px) {
         font-size: 15px;

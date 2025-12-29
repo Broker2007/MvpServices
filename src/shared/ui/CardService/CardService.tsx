@@ -1,6 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './CardService.module.scss';
-import airplaneImg from '@/shared/assets/Image/airplane.jpg';
 import { Button } from '../Button/Button';
 import { ThemeButton } from '../Button/ThemeButton';
 import { useCart } from '@/shared/lib/hooks/useCart';
@@ -25,8 +24,8 @@ const CardService = ({ className, service }: CardServiceProps) => {
     return (
         <div className={classNames(cls.CardService, {}, [className])}>
 
-            <div className={cls.flex_space_bet}>
-                <div className={cls.h}>
+            <div className={cls.card_container}>
+                <div className={cls.card_header}>
                     <img src={service.imageUrl} alt="изображение услуги" className={cls.card_icon} />
                     <div className={cls.card_content}>
                         <p className={cls.card_title}>{service.title}</p>

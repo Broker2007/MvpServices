@@ -7,16 +7,13 @@ interface MainPageProps {
     className?: string,
 }
 
-const MainPage = ({ className }:MainPageProps) => {
-    const a = 123;
-    return (
-        <div className={classNames(cls.MainPage, {}, [className])}>
-            <div className={cls.head_block}>
-                <p className={cls.text_head}>Дополнительные услуги</p>
-            </div>
-            <ServicesList />
-            <OrderSummary className={cls.position_order} />
+const MainPage = ({ className }:MainPageProps) => (
+    <div className={classNames(cls.MainPage, {}, [className])}>
+        <div className={cls.head_block}>
+            <p className={cls.text_head}>Дополнительные услуги</p>
         </div>
-    );
-};
+        <ServicesList />
+        <OrderSummary className={cls.position_order} />
+    </div>
+);
 export default MainPage;

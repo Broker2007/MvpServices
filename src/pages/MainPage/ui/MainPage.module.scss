@@ -1,10 +1,15 @@
+.MainPage {
+    width: 100%;
+    min-height: 100vh;
+}
+
 .head_block {
-    background-color: white;
+    background-color: var(--color-white);
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    padding: 10px;
+    padding: var(--spacing-s);
     font: var(--font-m);
     font-weight: bold;
     text-align: center;
@@ -14,12 +19,8 @@
 .position_order {
     position: fixed;
     bottom: 0;
-}
 
-@media (min-width: 1024px) {
-    .position_order {
-        position: fixed;
-        bottom: 0;
+    @media (min-width: 1024px) {
         right: 0;
     }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './OrderSummary.module.scss';
 import { Button } from '../Button/Button';
@@ -17,12 +17,12 @@ const OrderSummary = ({ className }: OrderSummaryProps) => {
         setIsCollapsed(!isCollapsed);
     };
 
-    const handleOrderClick = (e: React.MouseEvent) => {
+    const handleOrderClick = (e: MouseEvent) => {
         e.stopPropagation();
         console.log('Оформление заказа', state.cart);
     };
 
-    const formatPrice = (price: number) => `${price} $`;
+    const formatPrice = (price: number) => `${price} ₽`;
 
     return (
         <div
@@ -47,7 +47,7 @@ const OrderSummary = ({ className }: OrderSummaryProps) => {
                     <p className={cls.text_total}>Итого:</p>
                     <p className={cls.text_price}>
                         {state.total}
-                        Р
+                        {' ₽'}
                     </p>
                 </div>
                 <Button

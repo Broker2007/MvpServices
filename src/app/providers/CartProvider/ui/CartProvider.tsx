@@ -1,5 +1,5 @@
-import React, {
-    createContext, useReducer, useEffect,
+import {
+    createContext, useReducer, useEffect, useMemo, type ReactNode,
 } from 'react';
 import {
     type CartContextType, CartActionTypes, type Service,
@@ -15,42 +15,45 @@ export const CartContext = createContext<CartContextType>({
 });
 
 interface CartProviderProps {
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export const CartProvider = ({ children }: CartProviderProps) => {
     const [state, dispatch] = useReducer(cartReducer, initialState);
+
     useEffect(() => {
         dispatch({
             type: CartActionTypes.SET_SERVICES,
             payload: mockServices,
         });
     }, []);
-    const addToCart = (service: Service) => {
+
+    const addToCart = useMemo(() => (service: Service) => {
         dispatch({
             type: CartActionTypes.ADD_TO_CART,
             payload: service,
         });
-    };
+    }, [dispatch]);
 
-    const removeFromCart = (serviceId: string) => {
+    const removeFromCart = useMemo(() => (serviceId: string) => {
         dispatch({
             type: CartActionTypes.REMOVE_FROM_CART,
             payload: serviceId,
         });
-    };
+    }, [dispatch]);
 
-    const clearCart = () => {
+    const clearCart = useMemo(() => () => {
         dispatch({
             type: CartActionTypes.CLEAR_CART,
         });
-    };
-    const contextValue: CartContextType = {
+    }, [dispatch]);
+
+    const contextValue = useMemo((): CartContextType => ({
         state,
         addToCart,
         removeFromCart,
         clearCart,
-    };
+    }), [state, addToCart, removeFromCart, clearCart]);
 
     return (
         <CartContext.Provider value={contextValue}>

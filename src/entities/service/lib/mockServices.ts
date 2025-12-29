@@ -12,7 +12,7 @@ export const mockServices: Service[] = [
         title: 'Дополнительный багаж',
         description: 'Добавьте к провозу 10 кг багажа сверх нормы',
         price: 50,
-        currency: '$',
+        currency: '₽',
         imageUrl: Bag,
     },
     {
@@ -20,7 +20,7 @@ export const mockServices: Service[] = [
         title: 'Страхование полета',
         description: 'Полная страховка на время перелета и стыковок',
         price: 25,
-        currency: '$',
+        currency: '₽',
         imageUrl: Document,
     },
     {
@@ -28,7 +28,7 @@ export const mockServices: Service[] = [
         title: 'Премиум питание',
         description: 'Специальное меню от шеф-повара с выбором блюд',
         price: 35,
-        currency: '$',
+        currency: '₽',
         imageUrl: Food,
     },
     {
@@ -36,7 +36,7 @@ export const mockServices: Service[] = [
         title: 'Приоритетная посадка',
         description: 'Посадка в первой группе без очереди',
         price: 20,
-        currency: '$',
+        currency: '₽',
         imageUrl: Place,
     },
     {
@@ -44,7 +44,7 @@ export const mockServices: Service[] = [
         title: 'Дополнительное место',
         description: 'Бронирование соседнего кресла для комфорта',
         price: 150,
-        currency: '$',
+        currency: '₽',
         imageUrl: Place,
     },
     {
@@ -52,7 +52,7 @@ export const mockServices: Service[] = [
         title: 'Премиум-зал ожидания',
         description: 'Доступ в бизнес-лаунж с питанием и напитками',
         price: 75,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -60,7 +60,7 @@ export const mockServices: Service[] = [
         title: 'Wi-Fi на борту',
         description: 'Высокоскоростной интернет на протяжении всего полета',
         price: 15,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -68,7 +68,7 @@ export const mockServices: Service[] = [
         title: 'Детское меню',
         description: 'Специальное питание для детей с игрушкой в подарок',
         price: 18,
-        currency: '$',
+        currency: '₽',
         imageUrl: Menu,
     },
     {
@@ -76,7 +76,7 @@ export const mockServices: Service[] = [
         title: 'Вегетарианское питание',
         description: 'Полноценное меню без мясных продуктов',
         price: 22,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -84,7 +84,7 @@ export const mockServices: Service[] = [
         title: 'Трансфер в аэропорт',
         description: 'Комфортабельный трансфер от двери до терминала',
         price: 60,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -92,7 +92,7 @@ export const mockServices: Service[] = [
         title: 'Повышение класса',
         description: 'Апгрейд до бизнес-класса при наличии мест',
         price: 300,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -100,7 +100,7 @@ export const mockServices: Service[] = [
         title: 'Спортивный инвентарь',
         description: 'Перевоз лыж, сноуборда или велосипеда',
         price: 45,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -108,7 +108,7 @@ export const mockServices: Service[] = [
         title: 'Медицинская страховка',
         description: 'Страховка на случай болезни в поездке',
         price: 30,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -116,7 +116,7 @@ export const mockServices: Service[] = [
         title: 'Горячее питание',
         description: 'Теплый обед или ужин на борту',
         price: 28,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -124,7 +124,7 @@ export const mockServices: Service[] = [
         title: 'Дополнительная подушка',
         description: 'Ортопедическая подушка для комфортного сна',
         price: 12,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -132,7 +132,7 @@ export const mockServices: Service[] = [
         title: 'Плед повышенной комфортности',
         description: 'Теплый плед из натуральных материалов',
         price: 10,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -140,7 +140,7 @@ export const mockServices: Service[] = [
         title: 'Наушники премиум-класса',
         description: 'Шумоподавляющие наушники для просмотра фильмов',
         price: 25,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -148,7 +148,7 @@ export const mockServices: Service[] = [
         title: 'Мобильное приложение',
         description: 'Премиум-версия приложения без рекламы',
         price: 5,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -156,7 +156,7 @@ export const mockServices: Service[] = [
         title: 'Экскурсия в аэропорту',
         description: 'Обзорная экскурсия по аэропорту во время стыковки',
         price: 40,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
     {
@@ -164,7 +164,7 @@ export const mockServices: Service[] = [
         title: 'Фотосессия на борту',
         description: 'Профессиональная фотосессия с экипажем',
         price: 65,
-        currency: '$',
+        currency: '₽',
         imageUrl: Airplane,
     },
 ];
